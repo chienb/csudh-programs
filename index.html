@@ -1,0 +1,886 @@
+<html>
+<head>
+	<style>
+	body{
+	  margin:0;
+	  text-align:left;
+	  font-family: Verdana;
+	  background:#f5f5f5;
+	}
+
+	input[type="radio"] {
+	    display:none;
+	}
+	label {
+	  width:23%;
+	  float:left;
+	  text-align:center;
+	  background:#ffffff;
+	  /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+	  color:#222222;
+	  padding:0.5%;
+	  margin:0.1%;
+	  /*margin-bottom:30px;*/
+	  cursor:pointer;
+	}
+
+	input[type="radio"][id="bs"]:checked ~ .bs {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+		background: #860038;
+	}
+
+	input[type="radio"][id="ba"]:checked ~ .ba {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+		background: #efba08;
+		color:black;
+	}
+
+	input[type="radio"][id="ma"]:checked ~ .ma {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+		background: #00416d;
+	}
+
+	input[type="radio"][id="ms"]:checked ~ .ms {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+		background: #00b3c5;
+		color:#fff;
+	}
+
+	input[type="radio"][id="mba"]:checked ~ .mba {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+		background: #75787b;
+		color:#fff;
+	}
+
+	input[type="radio"][id="mpa"]:checked ~ .mpa {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+		background: #000000;
+		color:#fff;
+	}
+
+
+	input[type="radio"][id="credential"]:checked ~ .credential {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+		background: #333;
+		color:#fff;
+	}
+
+/*	input[type="radio"][id="biology"]:checked + label {
+		background:#ccc;
+	}
+	input[type="radio"][id="biology"]:checked ~ .biology {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+	}*/
+
+/*	input[type="radio"][id="africana-studies"]:checked + label {
+		background:#ccc;
+	}
+	input[type="radio"][id="africana-studies"]:checked ~ .africana-studies {
+		width: 23%;
+		height: 100px;
+		margin: 0.5%;
+		padding: 0.5%;
+		opacity: 1;
+
+	}*/
+
+	input[type="radio"]:checked + label 
+
+	  {
+	  	background:#ccc;
+	  }
+
+
+	input[type="radio"][id="reset"]:checked ~ .bs,
+	input[type="radio"][id="reset"]:checked ~ .ba,
+	input[type="radio"][id="reset"]:checked ~ .ms,
+	input[type="radio"][id="reset"]:checked ~ .ma,
+	input[type="radio"][id="reset"]:checked ~ .credential,
+	input[type="radio"][id="bio"]:checked ~ .bio,
+	input[type="radio"][id="africana-studies"]:checked ~ .africana-studies,
+	input[type="radio"][id="anthropology"]:checked ~ .anthropology,	
+	input[type="radio"][id="applied-studies"]:checked ~ .applied-studies,
+	input[type="radio"][id="art-design"]:checked ~ .art-design,
+	input[type="radio"][id="behavioral-sci"]:checked ~ .behavioral-sci,
+	input[type="radio"][id="chem-biochem"]:checked ~ .chem-biochem,
+	input[type="radio"][id="business-admin"]:checked ~ .business-admin,
+	input[type="radio"][id="chicanao-studies"]:checked ~ .chicanao-studies,
+	input[type="radio"][id="child-development"]:checked ~ .child-development,
+	input[type="radio"][id="health-sciences"]:checked ~ .health-sciences,
+	input[type="radio"][id="communications"]:checked ~ .communications,
+	input[type="radio"][id="computer-science"]:checked ~ .computer-science,
+	input[type="radio"][id="papp"]:checked ~ .papp,
+	input[type="radio"][id="digital-media-arts"]:checked ~ .digital-media-arts,
+	input[type="radio"][id="earth-science-geo"]:checked ~ .earth-science-geo,
+	input[type="radio"][id="english"]:checked ~ .english,
+	input[type="radio"][id="history"]:checked ~ .history,
+	input[type="radio"][id="human-services"]:checked ~ .human-services,
+	input[type="radio"][id="inter-studies"]:checked ~ .inter-studies,
+	input[type="radio"][id="labor-studies"]:checked ~ .labor-studies,
+	input[type="radio"][id="liberal-studies"]:checked ~ .liberal-studies,
+	input[type="radio"][id="math"]:checked ~ .math,
+	input[type="radio"][id="music"]:checked ~ .music,
+	input[type="radio"][id="ncrpb"]:checked ~ .ncrpb,
+	input[type="radio"][id="nursing"]:checked ~ .nursing,
+	input[type="radio"][id="philosophy"]:checked ~ .philosophy,
+	input[type="radio"][id="kinesiology"]:checked ~ .kinesiology,
+	input[type="radio"][id="physics"]:checked ~ .physics,
+	input[type="radio"][id="poli-sci"]:checked ~ .poli-sci,
+	input[type="radio"][id="psy"]:checked ~ .psy,
+	input[type="radio"][id="ceie"]:checked ~ .ceie,
+	input[type="radio"][id="sociology"]:checked ~ .sociology,
+	input[type="radio"][id="modern-lang"]:checked ~ .modern-lang,
+	input[type="radio"][id="theater-arts-dance"]:checked ~ .theater-arts-dance,
+	input[type="radio"][id="edu"]:checked ~ .edu
+
+
+
+
+	{
+	  width: 23%;
+	  height: 100px;
+	  margin: 0.5%;
+	  padding: 0.5%;
+	  opacity: 1;
+	}
+
+	.tile {
+		width: 0;
+		height: 0;
+		padding: 0;
+		margin: 0;
+		opacity: 0;
+		float: left;
+		transition: all 1s;
+		position: relative;
+		overflow: hidden;
+	}
+	.ma {
+	  background:#00416D;
+	  color:#fff;
+	}
+
+	.ms {
+	  background:#00b3c5;
+	  color:#fff;
+	}
+	.bs {
+	  background:#860038;
+	  color:#fff;
+	}
+	.ba {
+	  background:#efba08;
+	}
+
+	.mba {
+	  background:#75787b;
+	  color:#fff;
+	}
+
+	.credential {
+	  background: #333;
+	  color:#fff;
+	}
+
+
+	.mpa {
+		background: #000000;
+		color:white;
+	}
+	.multi {
+		background: #556270;
+		color:#fff;
+	}
+
+
+	.explore {
+	    position: absolute;
+	    bottom: 10%;
+	    border-top: 1px solid #fff;
+	    width: 95%;
+	    padding-top: 4px;
+	    font-size: 12px;
+}
+
+	/*tabs*/
+
+	/* Style the tab */
+	.tab {
+	    overflow: hidden;
+	}
+
+	/* Style the buttons inside the tab */
+	.tab button {
+	    background-color: inherit;
+	    float: left;
+	    border: none;
+	    outline: none;
+	    cursor: pointer;
+	    padding: 14px 16px;
+	    transition: 0.3s;
+	    font-size: 17px;
+	}
+
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+	    background-color: #ddd;
+	}
+
+	/* Create an active/current tablink class */
+	.tab button.active {
+	    background-color: #ccc;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+	    display: none;
+	    padding: 6px 12px;
+	    border-top: none;
+	}
+
+	/*Modal*/
+
+	/* Popup Box */
+
+	/* The Modal (background) */
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 8888; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+	    background-color: #fefefe;
+	    margin: 10vh auto; /* 15% from the top and centered */
+	    padding: 20px;
+	    border: 1px solid #888;
+	    width: 90%; /* Could be more or less, depending on screen size */
+	    font-size: 12px;
+	}
+
+	.modal-content h2 {
+		margin: 0;
+	}
+	@media (min-width: 1366px) {
+	  .modal-content {
+	    background-color: #fefefe;
+	    margin: 10vh auto; /* 15% from the top and centered */
+	    padding: 20px;
+	    border: 1px solid #888;
+	    width: 30%; /* Could be more or less, depending on screen size */
+		}
+	}
+
+	/* The Close Button */
+	.close {
+	    color: #aaa;
+	    /*float: right;*/
+	    font-size: 28px;
+	    font-weight: bold;
+	    position:absolute;
+	    top:-9px;
+	    right: 0;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: black;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	button.button {
+	 	background:none;
+	  border-top:none;
+	  border-right:none;
+	  border-left:none;
+	  border-bottom: none;
+	  padding:0;
+	  font-size:12px;
+	  cursor: pointer;
+	}
+
+	button.button:hover {
+	  /*border-bottom:#a99567 1px solid;*/
+	  color:#a99567;
+	}
+
+	.apply {
+      border: none;
+      background: #00416d;
+      padding: 10px;
+      color: #fff;
+      cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+<h1>Majors & Minors</h1>
+<p>
+Find your future academic program here. We offer 60 major and 55 minor undergraduate degrees and programs. For graduate students, we have 39 master's degree programs, one education doctorate, one juris doctorate, one doctorate of juridical science and 10 cbaential/authorization programs.</p>
+
+
+
+
+
+<div class="container">
+
+<div class="tab">
+  <button class="tablinks" onclick="programFilter(event, 'degree')">Filter by Degree</button>
+  <button class="tablinks" onclick="programFilter(event, 'area')">Filter by Area of Study</button>
+  <button class="tablinks" onclick="programFilter(event, 'tab3')">Tab 3</button>
+</div>
+
+<div id="degree" class="tabcontent">
+  <input type="radio" id="bs" name="degree" />
+  <label for="bs">B.S.</label>
+  <input type="radio" id="ba" name="degree"/>
+  <label for="ba">B.A.</label>
+  <input type="radio" id="ma" name="degree"/>
+  <label for="ma">M.A.</label>
+  <input type="radio" id="ms" name="degree"/>
+  <label for="ms">M.S.</label>
+  <input type="radio" id="mba" name="degree"/>
+  <label for="mba">M.B.A</label>
+  <input type="radio" id="mpa" name="degree"/>
+  <label for="mpa">M.P.A</label>
+  <input type="radio" id="credential" name="degree"/>
+  <label for="credential">Credential</label>
+  <input type="radio" id="reset" checked name="degree"/>
+  <label for="reset">RESET</label>
+  <div style="clear:left;"></div>
+  <hr style="color:solid #ccc;">
+
+  <div class="tile ba">Africana Studies<div class="explore"><button class="button" data-modal="modalOne">
+    Explore options
+  </button></div></div>
+
+  <div id="modalOne" class="modal">
+    <div class="modal-content">
+      <div class="" style="position: relative">
+        <a class="close">&times;</a>
+        <h2>Africana Studies</h2><br>
+        <a href="https://placeholder.com"><img src="http://via.placeholder.com/500x350"></a>
+        <p>The Department of Africana Studies in the College of Arts and Humanities offers a major and a minor in Africana Studies. Africana Studies is primarily a discipline which investigates the social, cultural, political and aesthetic dimensions of Africana peoples' experiences. These experiences range from earliest human civilizations through the tragic era of enslavement, colonization and involuntary dispersal through forced migration and displacement of African peoples.</p>
+        <hr>
+        <strong>Available options</strong>: 
+          <ul>
+            <li>General Africana Studies Concentration</li> 
+            <li>Historical and Political Development Concentration</li>
+            <li>Language and Literary Traditions Concentration</li>
+            <li>Socio-Psychological Behaviors Concentration</li>
+          </ul>
+          <a href="https://www2.calstate.edu/attend/freshman/Pages/applying-to-the-csu.aspx"><button class="apply">Apply now</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tile ba">Anthropology<div class="explore">Explore options</div></div>
+
+
+  <div class="tile bs">Applied Studies</div>
+  <div class="tile ba bs multi">Art<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ma">Arts & Humanities<div class="explore">Explore options</div></div>
+
+
+
+  <div class="tile bs">Behavioral Science</div>
+  <div class="tile bs">Biochemistry</div>
+  <div class="tile ba ms multi">Biology<div class="explore">Explore options</div></div>
+
+  <div class="tile bs mba multi">Business Administration<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ba">Chemistry<div class="explore">Explore options</div></div>
+
+
+
+  <div class="tile ba">Chicana/Chicano Studies<div class="explore">Explore options</div></div>
+
+
+
+  <div class="tile bs">Child Development<div class="explore">Explore options</div></div>
+
+  
+  <div class="tile bs">Clinical Science<div class="explore">Explore options</div></div>
+
+  
+  <div class="tile ba">Communications<div class="explore">Explore options</div></div>
+
+
+  <div class="tile bs ms multi">Computer Science</div>
+
+  <div class="tile ba">Computer Technology<div class="explore">Explore options</div></div>
+
+  <div class="tile ba">Criminal Justice Administration</div>
+
+  <div class="tile ba">Digital Media Arts<div class="explore">Explore options</div></div>
+
+
+  <div class="tile bs">Earth Science</div>
+
+  <div class="tile ma ms credential multi">Education<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ba ma multi">English<div class="explore">Explore options</div></div>
+
+  <div class="tile ma">Environmental Science</div>
+
+  <div class="tile ba">Geography</div>
+
+  <div class="tile bs ms multi">Health Science<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ba">History<div class="explore">Explore options</div></div>
+
+  <div class="tile ba">Human Services</div>
+  <div class="tile bs">Information Techology</div>
+
+  <div class="tile ba ma ms multi">Interdisciplinary Studies<div class="explore">Explore options</div></div>
+
+  <div class="tile ba">Labor Studies</div>
+
+  
+  <div class="tile ba">Liberal Studies<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ms">Marital & Family Therapy</div>
+
+
+  <div class="tile ba">Mathematics<div class="explore">Explore options</div></div>
+
+
+
+  <div class="tile ba">Music<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ba ma multi">Negotiation, Conflict Resolution and Peace Building</div>
+  <div class="tile bs ms multi">Nursing<div class="explore">Explore options</div></div>
+
+  <div class="tile ms">Occupational Therapy</div>
+
+
+  <div class="tile ba">Philosophy<div class="explore">Explore options</div></div>
+
+
+ <div class="tile ba">Physical Education<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ba">Physics<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ba">Political Science</div>
+  <div class="tile ba ma multi">Psychology<div class="explore">Explore options</div></div>
+
+  <div class="tile bs mpa multi">Public Administration<div class="explore">Explore options</div></div>
+
+
+
+  <div class="tile bs ms multi">Quality Assurance<div class="explore">Explore options</div></div>
+
+
+  <div class="tile ms">Social Work</div>
+
+  <div class="tile ba ma multi">Sociology<div class="explore">Explore options</div></div>
+
+  <div class="tile ba">Spanish<div class="explore">Explore options</div></div>
+
+  <div class="tile ma credential multi">Special Education<div class="explore">Explore options</div></div>
+
+  <div class="tile credential">Teacher Education Credential<div class="explore">Explore options</div></div>
+
+
+
+  <div class="tile ba">Theatre Arts and Dance<div class="explore">Explore options</div></div>
+
+
+</div>
+
+<div id="area" class="tabcontent">
+  <input type="radio" id="africana-studies" name="area" />
+  <label for="africana-studies">Africana Studies</label>
+  <input type="radio" id="anthropology" name="area"/>
+  <label for="anthropology">Anthropology</label>
+  <input type="radio" id="applied-studies" name="area"/>
+  <label for="applied-studies">Applied Studies</label>
+  <input type="radio" id="art-design" name="area"/>
+  <label for="art-design">Art & Design</label>
+  <input type="radio" id="behavioral-sci" name="area"/>
+  <label for="behavioral-sci">Behavioral Science</label>
+  <input type="radio" id="chem-biochem" name="area" />
+  <label for="chem-biochem">Chemistry & Biochemistry</label>
+  <input type="radio" id="bio" name="area"/>
+  <label for="bio">Biology</label>
+  <input type="radio" id="business-admin" name="area"/>
+  <label for="business-admin">Business Administration</label>
+  <input type="radio" id="chicanao-studies" name="area"/>
+  <label for="chicanao-studies">Chicana/o Studies</label>
+  <input type="radio" id="child-development" name="area"/>
+  <label for="child-development">Child Development</label>
+  <input type="radio" id="health-sciences" name="area" />
+  <label for="health-sciences">Health Sciences</label>
+  <input type="radio" id="communications" name="area"/>
+  <label for="communications">Communications</label>
+  <input type="radio" id="computer-science" name="area"/>
+  <label for="computer-science">Computer Science</label>
+  <input type="radio" id="edu" name="area"/>
+  <label for="edu">Education</label>
+  <input type="radio" id="papp" name="area"/>
+  <label for="papp">Public Administration and Public Policy</label>
+  <input type="radio" id="digital-media-arts" name="area"/>
+  <label for="digital-media-arts">Digital Media Arts</label>
+  <input type="radio" id="earth-science-geo" name="area"/>
+  <label for="earth-science-geo">Earth Science and Geography</label>
+  <input type="radio" id="english" name="area"/>
+  <label for="english">English</label>
+  <input type="radio" id="history" name="area" />
+  <label for="history">History</label>
+  <input type="radio" id="human-services" name="area"/>
+  <label for="human-services">Human Services</label>
+  <input type="radio" id="inter-studies" name="area"/>
+  <label for="inter-studies">Interdisciplinary Studies</label>
+  <input type="radio" id="labor-studies" name="area"/>
+  <label for="labor-studies">Labor Studies</label>
+  <input type="radio" id="liberal-studies" name="area"/>
+  <label for="liberal-studies">Liberal Studies</label>
+
+  <input type="radio" id="math" name="area"/>
+  <label for="math">Mathematics</label>
+  <input type="radio" id="music" name="area"/>
+  <label for="music">Music</label>
+  <input type="radio" id="ncrpb" name="area"/>
+  <label for="ncrpb">NCRPB</label>
+  <input type="radio" id="nursing" name="area"/>
+  <label for="nursing">Nursing</label>
+  <input type="radio" id="philosophy" name="area"/>
+  <label for="philosophy">Philosophy</label>
+  <input type="radio" id="kinesiology" name="area" />
+  <label for="kinesiology">Kinesiology</label>
+  <input type="radio" id="physics" name="area"/>
+  <label for="physics">Physics</label>
+  <input type="radio" id="poli-sci" name="area"/>
+  <label for="poli-sci">Political Science</label>
+  <input type="radio" id="psy" name="area"/>
+  <label for="psy">Psychology</label>
+  <input type="radio" id="ceie" name="area"/>
+  <label for="ceie">College of Extended & International Education</label>
+
+  <input type="radio" id="sociology" name="area"/>
+  <label for="sociology">Sociology</label>
+  <input type="radio" id="modern-lang" name="area"/>
+  <label for="modern-lang">Modern Languages</label>
+  <input type="radio" id="theater-arts-dance" name="area" />
+  <label for="theater-arts-dance">Theater Arts and Dance</label>
+
+  <div style="clear:left;"></div>
+  <hr style="color:solid #ccc;">
+
+  <div class="tile ba africana-studies">General Africana Studies Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba africana-studies">Historical and Political Development Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba africana-studies">Language and Literary Traditions Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba africana-studies">Socio-Psychological Behaviors Concentration<div class="explore">B.A.</div></div>
+
+  <div class="tile ba bio">Cellular and Molecular Biology Option<div class="explore">B.S.</div></div>
+  <div class="tile ba bio">Ecology and Environmental Biology Option<div class="explore">B.S.</div></div>
+  <div class="tile ba bio">Microbiology Option<div class="explore">B.S.</div></div>
+  <div class="tile multi bio">Biology<div class="explore">B.A., M.S.</div></div>
+
+  <div class="tile ba anthropology">Applied Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba anthropology">Archaeology Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba anthropology">Biological Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba anthropology">General Anthropology Concentration<div class="explore">B.A.</div></div>
+
+  <div class="tile bs applied-studies">Applied Studies<div class="explore">B.A.</div></div>
+  
+  <div class="tile ba art-design">History Option<div class="explore">B.A.</div></div>
+  <div class="tile ba art-design">Design Option<div class="explore">B.A.</div></div>
+  <div class="tile ba art-design">Studio Art Option<div class="explore">B.A.</div></div>
+  <div class="tile ma art-design">Art & Humanities: Humanities in the City<div class="explore">M.A.</div></div>
+  <div class="tile ma art-design">Art & Humanities: Music & Intellectual Inquiry<div class="explore">M.A.</div></div>
+
+
+  <div class="tile ba behavioral-sci">Behavioral Science<div class="explore">B.A.</div></div>
+
+  <div class="tile bs business-admin">Accounting Concentration<div class="explore">B.S.</div></div>
+  <div class="tile bs business-admin">Entrepreneurship Concentration<div class="explore">B.S.</div></div>
+  <div class="tile multi business-admin">Finance Concentration<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">General Business Concentration<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">Global Logistics and Supply Chain Management Concentration-Systems Track<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">Global Logistics and Supply Chain Mgmt Concentration-International Logistics Track<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile bs business-admin">Information Systems Concentration<div class="explore">B.S.</div></div>
+  <div class="tile bs business-admin">Information Systems Security Concentration<div class="explore">B.S.</div></div>
+  <div class="tile multi business-admin">International Business Concentration-General Emphasis<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">International Business Concentration-Latin America Emphasis<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">Management and Human Resources Concentration-Human Resources Track<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">Management and Human Resources Concentration-Management Track<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">Marketing Concentration-Advertising Emphasis<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile multi business-admin">Marketing Concentration-Marketing Management Emphasis<div class="explore">B.S., M.B.A.</div></div>
+  <div class="tile bs business-admin">Sports, Entertainment and Hospitality Management Concentration<div class="explore">B.S.</div></div>
+  <div class="tile mba business-admin">Information Technology Management<div class="explore">M.B.A.</div></div>
+
+
+  <div class="tile bs chem-biochem">Biochemistry<div class="explore">B.S.</div></div>
+  <div class="tile ba chem-biochem">Chemistry: Biochemistry Option<div class="explore">B.A.</div></div>
+  <div class="tile ba chem-biochem">Chemistry: General Chemistry Option<div class="explore">B.A.</div></div>
+  <div class="tile ba chem-biochem">Chemistry: General Chemistry Option<div class="explore">B.A.</div></div>
+
+  <div class="tile ba chicanao-studies">Arts, Aesthetics and Performance<div class="explore">B.A.</div></div>
+  <div class="tile ba chicanao-studies">Culture, History, and Political Development<div class="explore">B.A.</div></div>
+  <div class="tile ba chicanao-studies">Education, Social, and Community Development<div class="explore">B.A.</div></div>
+  <div class="tile ba chicanao-studies">Language and Literature<div class="explore">B.A.</div></div>
+
+  <div class="tile bs child-development">Counseling and Family Services Concentration<div class="explore">B.S.</div></div>
+  <div class="tile bs child-development">Early Teaching and Learning Concentration<div class="explore">B.S.</div></div>
+  <div class="tile bs child-development">General Elective Concentration<div class="explore">B.S.</div></div>
+  <div class="tile bs child-development">Juvenile Delinquency Concentration<div class="explore">B.S.</div></div>
+  <div class="tile bs child-development">Management and Administration Concentration<div class="explore">B.S.</div></div>
+
+  <div class="tile multi ceie">Quality Assurance<div class="explore">B.S., M.S.</div></div>
+  <div class="tile bs ceie">Quality Assurance: Measurement Science Option<div class="explore">B.S.</div></div>
+
+  <div class="tile ba communications">Advertising/Public Relations Option<div class="explore">B.A.</div></div>
+  <div class="tile ba communications">Journalism Option<div class="explore">B.A.</div></div>
+  <div class="tile ba communications">Media Studies Option<div class="explore">B.A.</div></div>
+
+  <div class="tile multi computer-science">Computer Science<div class="explore">B.S., M.S.</div></div>
+  <div class="tile ba computer-science">Computer Technology: General Track<div class="explore">B.A.</div></div>
+  <div class="tile ba computer-science">Computer Technology: Homeland Security Track<div class="explore">B.A.</div></div>
+  <div class="tile ba computer-science">Computer Technology: Professional Track<div class="explore">B.A.</div></div>
+  <div class="tile bs computer-science">Information Techology<div class="explore">B.S.</div></div>
+
+  <div class="tile bs digital-media-arts">Audio Recording Option<div class="explore">B.A.</div></div>
+  <div class="tile ba digital-media-arts">Music Technology Option<div class="explore">B.A.</div></div>
+  <div class="tile ba digital-media-arts">Television Arts Option<div class="explore">B.A.</div></div>
+
+  <div class="tile ma edu">Curriculum & Instruction<div class="explore">M.A.</div></div>
+  <div class="tile ma edu">School Leadership Program<div class="explore">M.A. Credential</div></div>
+  <div class="tile ma edu">Counseling: College Counseling School Counseling<div class="explore">M.S. Credential</div></div>
+  <div class="tile ms edu">Occupational Therapy<div class="explore">M.S.</div></div>
+  <div class="tile ma edu">Special Education: Early Childhood<div class="explore">M.A. Credential</div></div>
+  <div class="tile ma edu">Special Education: Mild/Moderate Disabilities<div class="explore">M.A. Credential</div></div>
+  <div class="tile ma edu">Special Education: Moderate/Severe Disabilities<div class="explore">M.A. Credential</div></div>
+  <div class="tile ma edu">Special Education: Severely/Learning Handicapped<div class="explore">M.A. Credential</div></div>
+  <div class="tile credential edu">Teacher Education Credential: Multiple/Single Subject<div class="explore">Credential</div></div>
+
+
+
+  <div class="tile bs health-sciences">Clinical Science: Cytotechnology Option<div class="explore">B.S.</div></div>
+  <div class="tile bs health-sciences">Clinical Science: Medical Technology Option<div class="explore">B.S.</div></div>
+  <div class="tile bs health-sciences">Community Health Option<div class="explore">B.S.</div></div>
+  <div class="tile bs health-sciences">Health Care Management Option<div class="explore">B.S.</div></div>
+  <div class="tile bs health-sciences">Radiologic Technology Option<div class="explore">B.S.</div></div>
+  <div class="tile ms health-sciences">Orthotics & Prosthetics<div class="explore">M.S.</div></div>
+  <div class="tile ms health-sciences">Marital & Family Therapy<div class="explore">M.S.</div></div>
+
+
+
+  <div class="tile bs earth-science-geo">Earth Science<div class="explore">B.S.</div></div>
+  <div class="tile ba earth-science-geo">Geography<div class="explore">B.A.</div></div>
+  <div class="tile ms earth-science-geo">Environmental Science<div class="explore">M.S.</div></div>
+
+
+  <div class="tile ba english">English Education Option<div class="explore">B.A.</div></div>
+  <div class="tile ba english">Language and Linguistics Option<div class="explore">B.A.</div></div>
+  <div class="tile multi english">Literature Option<div class="explore">B.A., M.A.</div></div>
+  <div class="tile ma english">Rhetoric & Composition Emphasis<div class="explore">M.A.</div></div>
+  <div class="tile ma english">Teaching English as Second Language (TESL)<div class="explore">M.A.</div></div>
+
+  <div class="tile ba history">History<div class="explore">B.S.</div></div>
+  <div class="tile ba history">History/Social Science Education Option<div class="explore">B.A.</div></div>
+
+  <div class="tile ba human-services">Human Services<div class="explore">B.A.</div></div>
+  <div class="tile ms human-services">Social Work<div class="explore">B.A., MSW</div></div>
+
+
+  <div class="tile ba inter-studies">American Studies Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba inter-studies">Comparative Cultures Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba inter-studies">Environmental Studies Concentration<div class="explore">B.A.</div></div>
+  <div class="tile ba inter-studies">Global Studies Cncentration<div class="explore">B.A.</div></div>
+  <div class="tile multi inter-studies">Interdisciplinary Studies<div class="explore">M.A., M.S.</div></div>
+
+
+  <div class="tile ba kinesiology">Physical Education: Fitness Director Option<div class="explore">B.A.</div></div>
+  <div class="tile ba kinesiology">Physical Education: Pre-Physical Therapy Option<div class="explore">B.A.</div></div>
+  <div class="tile ba kinesiology">Physical Education: Teaching Option<div class="explore">B.A.</div></div>
+
+  <div class="tile ba labor-studies">Labor Studies<div class="explore">B.A.</div></div>
+
+  <div class="tile ba liberal-studies">Anthropology Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Art Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Dance Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Early Teaching and Learning Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">English Language and Linguistics Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">English Literature Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">General Studies Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Human Development Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Mathematics Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Natural Science Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Physical Education Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Spanish Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Special Option<div class="explore">B.A.</div></div>
+  <div class="tile ba liberal-studies">Theatre Arts Option<div class="explore">B.A.</div></div>
+
+  <div class="tile bs math">Mathematics Education Option<div class="explore">B.S.</div></div>
+  <div class="tile bs math">Mathematics Option<div class="explore">B.S.</div></div>
+
+  <div class="tile ba modern-lang">Spanish: Linguistics Option<div class="explore">B.A.</div></div>
+  <div class="tile ba modern-lang">Spanish: Literature Option<div class="explore">B.A.</div></div>
+
+  <div class="tile ba music">General Music Option<div class="explore">B.A.</div></div>
+  <div class="tile ba music">Music Education Option<div class="explore">B.A.</div></div>
+  <div class="tile ba music">Performance Option<div class="explore">B.A.</div></div>
+
+  <div class="tile multi ncrpb">Negotiation, Conflict Resolution and Peace Building<div class="explore">B.A., M.A., Post Master's Credential</div></div>
+
+  <div class="tile bs nursing">Nursing<div class="explore">B.S.</div></div>
+  <div class="tile ms nursing">Nurse Educator<div class="explore">M.S., MSN</div></div>
+  <div class="tile ms nursing">Nurse Administrator<div class="explore">M.S., MSN</div></div>
+  <div class="tile ms nursing">Family Nurse Practitioner<div class="explore">M.S., MSN</div></div>
+  <div class="tile ms nursing">Clinical Nurse Specialist (Adult-Gerontology or Parent-Child)<div class="explore">M.S., MSN</div></div>
+
+  <div class="tile ba philosophy">Philosophy Option<div class="explore">B.S.</div></div>
+  <div class="tile ba philosophy">Religious Studies Option<div class="explore">B.S.</div></div>
+
+  <div class="tile ba physics">Electrical Engineering Option<div class="explore">B.S.</div></div>
+  <div class="tile ba physics">General Physics Option<div class="explore">B.S.</div></div>
+  <div class="tile ba physics">Physical Science Option<div class="explore">B.S.</div></div>
+
+  <div class="tile ba poli-sci">Political Science<div class="explore">B.A.</div></div>
+
+  <div class="tile ba psy">Psychology<div class="explore">B.A.</div></div>
+  <div class="tile ma psy">Health Psychology<div class="explore">M.A.</div></div>
+  <div class="tile ma psy">Clinical Psychology<div class="explore">M.A.</div></div>
+
+
+
+
+  <div class="tile bs papp">Criminal Justice Administration<div class="explore">B.S.</div></div>
+  <div class="tile bs papp">Administrative Management Concentration<div class="explore">B.S.</div></div>
+  <div class="tile multi papp">Criminal Justice Administration Concentration<div class="explore">B.S., MPA</div></div>
+  <div class="tile bs papp">Health Services Administration <div class="explore">B.S.</div></div>
+  <div class="tile bs papp">Public Financial Management Concentration<div class="explore">B.S.</div></div>
+  <div class="tile bs papp">Public Personnel Administration Concentration<div class="explore">B.S.</div></div>
+  <div class="tile mpa papp">Health Care Policy & Administration<div class="explore">MPA</div></div>
+  <div class="tile mpa papp">Nonprofit Management<div class="explore">MPA</div></div>
+  <div class="tile mpa papp">Public Management<div class="explore">MPA</div></div>
+
+
+
+  <div class="tile ba sociology">Sociology<div class="explore">B.A.</div></div>
+  <div class="tile ma sociology">General Sociology<div class="explore">B.A., M.A.</div></div>
+  <div class="tile ma sociology">Research Skills<div class="explore">B.A., M.A.</div></div>
+
+
+  <div class="tile ba theater-arts-dance">Dance Option<div class="explore">B.A.</div></div>
+  <div class="tile ba theater-arts-dance">Theatre Arts Option<div class="explore">B.A.</div></div>
+
+
+
+
+</div>
+
+
+
+<script>
+function programFilter(evt, filter) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(filter).style.display = "block";
+    evt.currentTarget.className += " active";
+
+    // Modal
+    /*jslint browser*/
+    /*global window*/
+    (function iife() {
+        "use strict";
+        function closestEl(el, selector) {
+            var doc = el.document || el.ownerDocument;
+            var matches = doc.querySelectorAll(selector);
+            var i;
+            while (el) {
+                i = matches.length - 1;
+                while (i >= 0) {
+                    if (matches.item(i) === el) {
+                        return el;
+                    }
+                    i -= 1;
+                }
+                el = el.parentElement;
+            }
+            return el;
+        }
+        var modalBtns = document.querySelectorAll(".button");
+        modalBtns.forEach(function addBtnClickEvent(btn) {
+            btn.onclick = function showModal() {
+                var modal = btn.getAttribute("data-modal");
+                document.getElementById(modal).style.display = "block";
+            };
+        });
+
+        var closeBtns = document.querySelectorAll(".close");
+        closeBtns.forEach(function addCloseClickEvent(btn) {
+            btn.onclick = function closeModal() {
+                var modal = closestEl(btn, ".modal");
+                modal.style.display = "none";
+            };
+        });
+
+        window.onclick = function closeOnClick(event) {
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+            }
+        };
+    }());
+}
+</script>
+</body>
+</html>
